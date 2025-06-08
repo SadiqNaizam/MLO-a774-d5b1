@@ -4,51 +4,40 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --background: 210 40% 98%; /* #F8FAFC */
+    --foreground: 210 29% 24%; /* #2C3E50 - primaryText */
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 0 0% 100%; /* #FFFFFF - surface */
+    --card-foreground: 210 29% 24%; /* #2C3E50 - primaryText */
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 100%; /* #FFFFFF - surface */
+    --popover-foreground: 210 29% 24%; /* #2C3E50 - primaryText */
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 233 87% 60%; /* #4154F1 - accent (PRD) */
+    --primary-foreground: 0 0% 100%; /* White */
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 225 43% 94%; /* #E7EAF3 - border (PRD), for secondary UI elements */
+    --secondary-foreground: 210 29% 24%; /* #2C3E50 - primaryText */
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 225 43% 94%; /* #E7EAF3 - border (PRD), for muted backgrounds */
+    --muted-foreground: 208 7% 49%; /* #6C757D - secondaryText (PRD) */
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 39 88% 61%; /* #F1B24A - accentSecondary (PRD) */
+    --accent-foreground: 210 29% 24%; /* #2C3E50 - primaryText */
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 7 79% 57%; /* #E74C3C - error (PRD) */
+    --destructive-foreground: 0 0% 100%; /* White */
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --success: 145 56% 55%; /* #50C878 - success (PRD) */
+    --success-foreground: 0 0% 100%; /* White */
 
-    --radius: 0.5rem;
+    --border: 225 43% 94%; /* #E7EAF3 - border (PRD) */
+    --input: 225 43% 94%; /* #E7EAF3 - border (PRD) */
+    --ring: 233 87% 60%; /* #4154F1 - accent (PRD) for focus */
 
-    --sidebar-background: 0 0% 98%;
+    --radius: 0.375rem; /* rounded-md from PRD (0.375rem) */
 
-    --sidebar-foreground: 240 5.3% 26.1%;
-
-    --sidebar-primary: 240 5.9% 10%;
-
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --font-sans: "Inter", system-ui, sans-serif;
   }
 
   .dark {
@@ -61,8 +50,8 @@
     --popover: 222.2 84% 4.9%;
     --popover-foreground: 210 40% 98%;
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    --primary: 233 87% 60%; /* #4154F1 */
+    --primary-foreground: 0 0% 100%;
 
     --secondary: 217.2 32.6% 17.5%;
     --secondary-foreground: 210 40% 98%;
@@ -70,23 +59,19 @@
     --muted: 217.2 32.6% 17.5%;
     --muted-foreground: 215 20.2% 65.1%;
 
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    --accent: 39 88% 61%; /* #F1B24A */
+    --accent-foreground: 210 29% 15%; /* Darker text for orange on dark */
 
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 7 79% 57%; /* #E74C3C */
+    --destructive-foreground: 0 0% 100%;
+    
+    --success: 145 56% 55%; /* #50C878 */
+    --success-foreground: 0 0% 100%;
 
     --border: 217.2 32.6% 17.5%;
     --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --ring: 233 87% 60%; /* #4154F1 */
+    /* --radius remains 0.375rem */
   }
 }
 
@@ -96,6 +81,9 @@
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground text-sm;
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 }
